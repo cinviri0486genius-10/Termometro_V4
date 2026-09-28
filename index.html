@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Termómetro de Emociones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🌡️ Mi Termómetro de Emociones</h1>
+        <p>¿Cómo se siente tu servidor interno hoy? Elige una zona para medir tu energía actual.</p>
+    </header>
+
+    <div class="game-layout">
+        <!-- Panel Izquierdo: El Termómetro Visual -->
+        <div class="box panel-termometro">
+            <div class="termometro-contenedor">
+                <div class="tubo">
+                    <div id="mercurio" class="mercurio-nivel-3"></div>
+                </div>
+                <div class="bulbo"></div>
+            </div>
+            
+            <div class="botones-emociones">
+                <button class="btn-emocion zona-roja" onclick="cambiarEmocion(5)">🔴 Enojado / Muy Ansioso</button>
+                <button class="btn-emocion zona-naranja" onclick="cambiarEmocion(4)">🟠 Frustrado / Preocupado</button>
+                <button class="btn-emocion zona-verde" onclick="cambiarEmocion(3)">🟢 Calmo / Enfocado</button>
+                <button class="btn-emocion zona-azul" onclick="cambiarEmocion(2)">🔵 Triste / Cansado</button>
+                <button class="btn-emocion zona-gris" onclick="cambiarEmocion(1)">⚪ Aburrido / Sin Energía</button>
+            </div>
+        </div>
+
+        <!-- Panel Derecho: Mensaje y Estrategia -->
+        <div class="box panel-info">
+            <div class="info-title">📊 Estado de mi Batería Emocional</div>
+            <div class="emoji-grande" id="emoji-display">🙂</div>
+            <h2 id="estado-nombre">Calmo / Enfocado</h2>
+            <p id="estado-descripcion">¡Tu sistema está funcionando al 100%! Es un gran momento para aprender cosas nuevas y resolver retos de código.</p>
+            
+            <div class="estrategia-box">
+                <strong>💡 Tip para la clase:</strong>
+                <p id="estado-estrategia">¡Comparte tu buena energía ayudando a algún compañero que se quede atascado en su código hoy!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

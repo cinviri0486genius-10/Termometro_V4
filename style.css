@@ -1,0 +1,123 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+}
+header { text-align: center; margin-bottom: 30px; }
+h1 { color: #38bdf8; margin: 5px; }
+
+.game-layout {
+    display: flex;
+    gap: 30px;
+    max-width: 800px;
+    width: 100%;
+    align-items: stretch;
+}
+.box {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 25px;
+    flex: 1;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+}
+
+/* Diseño del Termómetro Físico */
+.panel-termometro {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.termometro-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 60px;
+}
+.tubo {
+    width: 24px;
+    height: 250px;
+    background-color: #0f172a;
+    border-radius: 12px 12px 0 0;
+    position: relative;
+    border: 3px solid #334155;
+    border-bottom: none;
+    overflow: hidden;
+}
+#mercurio {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+.bulbo {
+    width: 44px;
+    height: 44px;
+    background-color: #22c55e;
+    border-radius: 50%;
+    margin-top: -5px;
+    border: 3px solid #334155;
+    transition: background-color 0.5s ease-in-out;
+    z-index: 2;
+}
+
+/* Alturas y colores del líquido (Mercurio) */
+.mercurio-nivel-1 { height: 20%; background-color: #94a3b8; }
+.mercurio-nivel-2 { height: 40%; background-color: #3b82f6; }
+.mercurio-nivel-3 { height: 60%; background-color: #22c55e; }
+.mercurio-nivel-4 { height: 80%; background-color: #f97316; }
+.mercurio-nivel-5 { height: 100%; background-color: #ef4444; }
+
+/* Botones laterales */
+.botones-emociones {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+.btn-emocion {
+    border: none;
+    color: white;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    transition: transform 0.2s, filter 0.2s;
+}
+.btn-emocion:hover { transform: scale(1.03); filter: brightness(1.1); }
+.zona-roja { background-color: #ef4444; }
+.zona-naranja { background-color: #f97316; }
+.zona-verde { background-color: #22c55e; color: #0f172a; }
+.zona-azul { background-color: #3b82f6; }
+.zona-gris { background-color: #94a3b8; color: #0f172a; }
+
+/* Panel de Información */
+.panel-info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.info-title { font-family: monospace; color: #94a3b8; margin-bottom: 10px; }
+.emoji-display { font-size: 70px; margin: 15px 0; }
+.estrategia-box {
+    background-color: #0f172a;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    margin-top: 20px;
+    text-align: left;
+}
+.estrategia-box strong { color: #38bdf8; display: block; margin-bottom: 5px; }
+.estrategia-box p { margin: 0; font-size: 14px; line-height: 1.4; color: #cbd5e1; }
